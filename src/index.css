@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-gray-50 text-gray-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-primary-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-medium rounded-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-accent-yellow-500 to-accent-orange-500 text-primary-900 hover:opacity-90 focus:ring-accent-orange-500;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-accent-yellow-500 text-accent-yellow-500 hover:bg-accent-yellow-500 hover:text-primary-900 focus:ring-accent-yellow-500;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-20;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-card p-6 transition-all duration-300;
+  }
+  
+  .nav-link {
+    @apply relative text-white hover:text-accent-yellow-500 transition-all duration-300 py-2 text-base;
+  }
+
+  .nav-link-active {
+    @apply text-accent-yellow-500 font-medium;
+  }
+
+  .footer-link {
+    @apply text-gray-300 hover:text-accent-yellow-500 transition-all duration-300;
+  }
+}
