@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Navigation */}
       <div 
-        className={`fixed inset-0 bg-primary-900 z-40 pt-20 transition-transform duration-300 ease-in-out transform ${
+        className={`fixed inset-0 bg-primary-900 z-40  transition-transform duration-300 ease-in-out transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } md:hidden`}
       >

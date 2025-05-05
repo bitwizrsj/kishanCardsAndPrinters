@@ -6,6 +6,12 @@ import SectionTitle from '../components/SectionTitle';
 import ServiceCard from '../components/ServiceCard';
 import Logo from '../components/Logo';
 
+import offsetImage from '../../assets/services/offset.png';
+import flexImage from '../../assets/services/flex.png';
+import weddingImage from '../../assets/services/wedding.png';
+import screenImage from '../../assets/services/screen.png';
+
+
 const Home: React.FC = () => {
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
@@ -31,14 +37,13 @@ const Home: React.FC = () => {
       exit={{ opacity: 0 }}
     >
       {/* Hero Section */}
-      <section className='relative flex items-center justify-center  bg-primary-900 pt-32 pb-20 md:pt-40 md:pb-32'>
-        <div className="relative max-w-7xl">
-        <div className="absolute  inset-0 overflow-hidden">
+      <section className="relative bg-primary-900 pt-32 pb-20 md:pt-40 md:pb-32">
+        <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -right-10 -top-10 w-72 h-72 bg-accent-yellow-500/20 rounded-full blur-3xl"></div>
           <div className="absolute -left-10 top-40 w-72 h-72 bg-accent-orange-500/20 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container-custom relative z-10">
+        <div className="container-custom max-w-7xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div
               variants={fadeIn}
@@ -84,11 +89,13 @@ const Home: React.FC = () => {
               <div className="relative">
                 <div className="w-72 h-72 bg-gradient-to-br from-accent-yellow-500 to-accent-orange-500 rounded-full blur-xl opacity-20 absolute transform -translate-x-1/2 -translate-y-1/2"></div>
                 <div className="relative bg-white p-2 rounded-xl shadow-2xl rotate-3 z-10">
-                  <img 
-                    src="https://images.pexels.com/photos/6612162/pexels-photo-6612162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                    alt="Printing press machine" 
-                    className="w-full h-auto rounded-lg"
-                  />
+                <img 
+  src="https://placehold.co/600x400?text=Printing+Press+Machine" 
+  alt="Printing press machine" 
+  className="w-full h-auto rounded-lg"
+/>
+
+
                 </div>
                 <div className="absolute -bottom-10 -left-10 bg-white p-4 rounded-lg shadow-lg -rotate-6 z-20">
                   <Logo className="h-16 w-16 text-accent-yellow-500" />
@@ -97,12 +104,10 @@ const Home: React.FC = () => {
             </motion.div>
           </div>
         </div>
-        </div>
-        
       </section>
 
       {/* Services Preview */}
-      <section className="section-padding  bg-gray-50">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom max-w-7xl">
           <SectionTitle
             subtitle="What We Offer"
@@ -111,30 +116,35 @@ const Home: React.FC = () => {
           />
           
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-            variants={staggerContainer}
-          >
-            <ServiceCard
-              icon={Printer}
-              title="Offset Printing"
-              description="High-quality offset printing services for brochures, catalogs, posters, and more with vibrant colors and sharp details."
-            />
-            <ServiceCard
-              icon={ImageIcon}
-              title="Flex Printing"
-              description="Large format flex printing perfect for banners, hoardings, and promotional materials with weather-resistant inks."
-            />
-            <ServiceCard
-              icon={FileText}
-              title="Wedding Cards"
-              description="Elegant and customized wedding invitation cards with premium paper quality and beautiful designs."
-            />
-            <ServiceCard
-              icon={Printer}
-              title="Screen Printing"
-              description="Professional screen printing services for fabrics, promotional items, and custom merchandise."
-            />
-          </motion.div>
+  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+  variants={staggerContainer}
+>
+<ServiceCard
+  image="https://img.freepik.com/free-photo/modern-manufacturing-equipment-futuristic-factory-generated-by-ai_188544-18464.jpg?ga=GA1.1.1722708618.1746429974&semt=ais_hybrid&w=740"
+  title="Offset Printing"
+  description="High-quality offset printing services for brochures, catalogs, posters, and more with vibrant colors and sharp details."
+/>
+
+<ServiceCard
+  image="https://img.freepik.com/free-vector/set-banners-with-abstract-geometric-shapes_23-2147919423.jpg?ga=GA1.1.1722708618.1746429974&semt=ais_hybrid&w=740"
+  title="Flex Printing"
+  description="Large format flex printing perfect for banners, hoardings, and promotional materials with weather-resistant inks."
+/>
+
+<ServiceCard
+  image="https://img.freepik.com/free-vector/hand-drawn-colorful-wedding-invitation-template_23-2148394115.jpg?ga=GA1.1.1722708618.1746429974&semt=ais_hybrid&w=740"
+  title="Wedding Cards"
+  description="Elegant and customized wedding invitation cards with premium paper quality and beautiful designs."
+/>
+
+<ServiceCard
+  image="https://img.freepik.com/free-vector/vintage-screen-printing-badges-set_225004-855.jpg?ga=GA1.1.1722708618.1746429974&semt=ais_hybrid&w=740"
+  title="Screen Printing"
+  description="Professional screen printing services for fabrics, promotional items, and custom merchandise."
+/>
+
+</motion.div>
+
           
           <div className="text-center mt-10">
             <Link to="/services" className="btn btn-primary">
@@ -253,7 +263,7 @@ const Home: React.FC = () => {
 
       {/* Call to Action */}
       <section className="bg-primary-900 py-16">
-        <div className="container-custom">
+        <div className="container-custom max-w-7xl">
           <div className="text-center">
             <motion.h2 
               className="text-3xl md:text-4xl font-bold text-white mb-6"
