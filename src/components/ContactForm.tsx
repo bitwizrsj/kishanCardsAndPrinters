@@ -15,23 +15,29 @@ const ContactForm: React.FC = () => {
     message: string;
   } | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, you'd send this data to a server
-    console.log('Form submitted:', formData);
-    
-    // For demo purposes, show success message
+
+    const { name, email, phone, subject, message } = formData;
+
+    const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone || 'N/A'}%0ASubject: ${subject}%0AMessage: ${message}`;
+    const whatsappURL = `https://wa.me/918696403065?text=${encodeURIComponent(whatsappMessage)}`;
+
+    // Open WhatsApp chat
+    window.open(whatsappURL, '_blank');
+
     setFormStatus({
       success: true,
-      message: 'Thank you for your message. We will get back to you soon!'
+      message: 'WhatsApp message prepared. Please send it from the opened window.',
     });
-    
-    // Reset form
+
     setFormData({
       name: '',
       email: '',
@@ -39,8 +45,7 @@ const ContactForm: React.FC = () => {
       subject: '',
       message: '',
     });
-    
-    // Clear success message after 5 seconds
+
     setTimeout(() => {
       setFormStatus(null);
     }, 5000);
@@ -49,17 +54,21 @@ const ContactForm: React.FC = () => {
   return (
     <div className="card">
       <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
-      
+
       {formStatus && (
-        <motion.div 
-          className={`p-4 rounded mb-6 ${formStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}
+        <motion.div
+          className={`p-4 rounded mb-6 ${
+            formStatus.success
+              ? 'bg-green-100 text-green-800'
+              : 'bg-red-100 text-red-800'
+          }`}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
         >
           {formStatus.message}
         </motion.div>
       )}
-      
+
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
@@ -77,7 +86,7 @@ const ContactForm: React.FC = () => {
               placeholder="John Doe"
             />
           </div>
-          
+
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
               Your Email *
@@ -93,7 +102,7 @@ const ContactForm: React.FC = () => {
               placeholder="john@example.com"
             />
           </div>
-          
+
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
               Phone Number
@@ -108,7 +117,7 @@ const ContactForm: React.FC = () => {
               placeholder="+91 98765 43210"
             />
           </div>
-          
+
           <div>
             <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
               Subject *
@@ -131,7 +140,7 @@ const ContactForm: React.FC = () => {
             </select>
           </div>
         </div>
-        
+
         <div className="mt-6">
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
             Your Message *
@@ -147,7 +156,7 @@ const ContactForm: React.FC = () => {
             placeholder="How can we help you?"
           ></textarea>
         </div>
-        
+
         <div className="mt-6">
           <motion.button
             type="submit"

@@ -67,7 +67,7 @@ const Services: React.FC = () => {
             >
               <div className="h-48 overflow-hidden relative">
                 <img 
-                  src="https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                  src="https://img.freepik.com/free-photo/modern-printing-press-produces-multi-colored-printouts-accurately-generated-by-ai_188544-15381.jpg?t=st=1746873919~exp=1746877519~hmac=fabfd9a7276e61849cf1cf4f6f6e2c4be681effd0cdee4a434a5945c667b38f1&w=1380" 
                   alt="Offset Printing" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -102,7 +102,7 @@ const Services: React.FC = () => {
             >
               <div className="h-48 overflow-hidden relative">
                 <img 
-                  src="https://images.pexels.com/photos/6667298/pexels-photo-6667298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                  src="https://img.freepik.com/free-vector/set-banners-with-abstract-geometric-shapes_23-2147919423.jpg" 
                   alt="Flex Printing" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -137,7 +137,7 @@ const Services: React.FC = () => {
             >
               <div className="h-48 overflow-hidden relative">
                 <img 
-                  src="https://images.pexels.com/photos/12806627/pexels-photo-12806627.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                  src="https://img.freepik.com/free-vector/vintage-screen-printing-badges-set_225004-855.jpg" 
                   alt="Screen Printing" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -172,7 +172,7 @@ const Services: React.FC = () => {
             >
               <div className="h-48 overflow-hidden relative">
                 <img 
-                  src="https://images.pexels.com/photos/5709020/pexels-photo-5709020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                  src="https://img.freepik.com/free-vector/hand-drawn-colorful-wedding-invitation-template_23-2148394115.jpg" 
                   alt="Wedding Cards" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -207,7 +207,7 @@ const Services: React.FC = () => {
             >
               <div className="h-48 overflow-hidden relative">
                 <img 
-                  src="https://images.pexels.com/photos/4353813/pexels-photo-4353813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                  src="https://img.freepik.com/free-psd/orange-elegant-corporate-card_1435-1096.jpg?t=st=1746873752~exp=1746877352~hmac=41d4421499bc7b39bb029d7bdcf08c2a2a83dcac298059711fd11c7a18ae65e9&w=826" 
                   alt="Business Cards" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -242,7 +242,7 @@ const Services: React.FC = () => {
             >
               <div className="h-48 overflow-hidden relative">
                 <img 
-                  src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                  src="https://img.freepik.com/free-vector/modern-set-brand-stationery-items-with-abstract-shapes_1017-14147.jpg?t=st=1746874103~exp=1746877703~hmac=ea1591cd57dc1322c293e3606feeefd2e7cf5d336721fb7d3ae78bf8e3d29671&w=826" 
                   alt="Stationery Printing" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -417,7 +417,7 @@ const Services: React.FC = () => {
               className="relative"
             >
               <img 
-                src="https://images.pexels.com/photos/6033993/pexels-photo-6033993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src="https://img.freepik.com/free-vector/organic-flat-printing-industry_23-2148906616.jpg?t=st=1746874495~exp=1746878095~hmac=41516808a2d461463e4a7e1f797b5743529aabb2e84d3bc9d6c1645c8d2202d7&w=1380" 
                 alt="Printing technology" 
                 className="rounded-lg shadow-lg"
               />

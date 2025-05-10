@@ -1,18 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DivideIcon as LucideIcon } from 'lucide-react';
 
 interface ServiceCardProps {
-  image: string; // path to the image
+  image: string;
   title: string;
-  description: string;
+  description: string[];
 }
-
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description }) => {
   return (
     <motion.div 
-      className="card group hover:shadow-lg"
+      className="card group hover:shadow-lg rounded-sm"
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
     >
@@ -24,10 +22,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description }) 
         />
       </div>
       <h3 className="text-xl font-semibold mb-2 group-hover:text-accent-orange-500 transition-all duration-300">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <ul className="list-disc list-inside text-sm text-gray-500 space-y-1 leading-snug">
+        {description.map((point, index) => (
+          <li key={index}>{point}</li>
+        ))}
+      </ul>
     </motion.div>
   );
 };
-
 
 export default ServiceCard;

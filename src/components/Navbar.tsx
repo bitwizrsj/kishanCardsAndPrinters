@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           </nav>
 
           <Link to="/contact" className="hidden md:block btn btn-primary">
-            Get a Quote
+            Contact Us
           </Link>
 
           {/* Mobile menu button */}
