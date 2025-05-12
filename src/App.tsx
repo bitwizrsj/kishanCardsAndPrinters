@@ -6,10 +6,12 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import ScrollToTop from './ScrollToTop';
+import ScrollToHash from './components/ScrollToHash';
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToHash />
       {/* This is the correct place */}
       <ScrollToTop />
       <Routes>

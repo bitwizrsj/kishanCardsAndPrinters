@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
     const { name, email, phone, subject, message } = formData;
 
     const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone || 'N/A'}%0ASubject: ${subject}%0AMessage: ${message}`;
-    const whatsappURL = `https://wa.me/918696403065?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappURL = `https://wa.me/9314621262?text=${encodeURIComponent(whatsappMessage)}`;
 
     // Open WhatsApp chat
     window.open(whatsappURL, '_blank');

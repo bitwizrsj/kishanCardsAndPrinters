@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 import ContactForm from '../components/ContactForm';
+import FAQSection from '../components/FAQSection.tsx';
 
 const Contact: React.FC = () => {
   const fadeIn = {
@@ -127,7 +128,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Contact Form and Map Section */}
-      <section className="section-padding bg-gray-50">
+      <section id="contact" className="section-padding bg-gray-50">
         <div className="container-custom max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
@@ -144,7 +145,7 @@ const Contact: React.FC = () => {
                   <h3 className="text-2xl font-semibold mb-6">Our Location</h3>
                   <div className="rounded-lg overflow-hidden h-[400px] mb-6">
                     <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56914.02331122273!2d75.7652422671388!3d26.85448329587283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5196f4b2191%3A0x71a7d24eb53af3a3!2sGoner%20Rd%2C%20Jaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1697606154321!5m2!1sen!2sin" 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d969.8633397174696!2d75.87627851705213!3d26.879931705704134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db77567700009%3A0x902709c46953afb!2sKishan%20Cards%20%26%20Printers!5e0!3m2!1sen!2sin!4v1746907118674!5m2!1sen!2sin" 
                       width="100%" 
                       height="100%" 
                       style={{ border: 0 }} 
@@ -172,76 +173,9 @@ const Contact: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom max-w-7xl">
-          <SectionTitle
-            subtitle="Quick Answers"
-            title="Frequently Asked Questions"
-            description="Find answers to common questions about our printing services and processes."
-          />
-          
-          <div className="max-w-3xl mx-auto">
-            <motion.div 
-              className="mb-6"
-              variants={fadeIn}
-            >
-              <div className="card">
-                <h3 className="text-lg font-semibold mb-2">What types of printing services do you offer?</h3>
-                <p className="text-gray-600">
-                  We offer a wide range of printing services including offset printing, flex printing, screen printing, wedding cards, business cards, and stationery printing. We can handle almost any printing need you might have.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="mb-6"
-              variants={fadeIn}
-            >
-              <div className="card">
-                <h3 className="text-lg font-semibold mb-2">How long does it take to complete a printing order?</h3>
-                <p className="text-gray-600">
-                  Turnaround times vary depending on the type of project, quantity, and complexity. Simple jobs like business cards might take 1-2 business days, while more complex projects like wedding cards or catalogs might take 3-7 business days. We always provide an estimated completion date when you place an order.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="mb-6"
-              variants={fadeIn}
-            >
-              <div className="card">
-                <h3 className="text-lg font-semibold mb-2">Do you provide design services?</h3>
-                <p className="text-gray-600">
-                  Yes, we offer professional design services for all our printing products. Our experienced designers can create custom designs based on your requirements or refine your existing designs for optimal print quality.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="mb-6"
-              variants={fadeIn}
-            >
-              <div className="card">
-                <h3 className="text-lg font-semibold mb-2">How do I get a quote for my printing project?</h3>
-                <p className="text-gray-600">
-                  You can get a quote by contacting us via phone, email, or by filling out the contact form on our website. Please provide details about your project including the type of printing, quantity, size, paper quality, and any special requirements to help us provide an accurate quote.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              variants={fadeIn}
-            >
-              <div className="card">
-                <h3 className="text-lg font-semibold mb-2">Do you offer rush orders or expedited services?</h3>
-                <p className="text-gray-600">
-                  Yes, we understand that sometimes you need prints quickly. We offer rush order services for an additional fee, depending on our current production schedule and the complexity of your project. Please contact us directly to discuss your specific deadline requirements.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <FAQSection />
+      
+      {/* Call to Action Section */}
     </motion.div>
   );
 };

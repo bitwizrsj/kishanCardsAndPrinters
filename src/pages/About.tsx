@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Users, Trophy, CalendarDays, Printer } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 import Logo from '../components/Logo';
+import gopal from '../assets/gopal.jpg'
+import BS from '../assets/BS.jpg'
 
 const About: React.FC = () => {
   const fadeIn = {
@@ -104,7 +106,7 @@ const About: React.FC = () => {
                   <Logo className="h-16 w-16 text-accent-yellow-500" />
                 </div>
                 <div className="absolute -top-6 -right-6 bg-white px-6 py-3 rounded-full shadow-lg text-primary-900 font-bold">
-                  Since 2005
+                  Since 1990
                 </div>
               </div>
             </motion.div>
@@ -129,7 +131,7 @@ const About: React.FC = () => {
               <div className="relative mb-6 inline-block">
                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-accent-yellow-500">
                   <img 
-                    src="https://images.pexels.com/photos/7148384/pexels-photo-7148384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                    src={gopal} 
                     alt="Gopal Meena" 
                     className="w-full h-full object-cover"
                   />
@@ -161,7 +163,7 @@ const About: React.FC = () => {
               <div className="relative mb-6 inline-block">
                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-accent-yellow-500">
                   <img 
-                    src="https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                    src={BS} 
                     alt="B.S. Meena" 
                     className="w-full h-full object-cover"
                   />
@@ -276,7 +278,7 @@ const About: React.FC = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="md:text-right md:pr-12">
-                    <h3 className="text-xl font-semibold mb-2">2005</h3>
+                    <h3 className="text-xl font-semibold mb-2">1990</h3>
                     <div className="card">
                       <h4 className="text-lg font-medium mb-2 text-accent-orange-500">Foundation</h4>
                       <p className="text-gray-600">
@@ -307,7 +309,7 @@ const About: React.FC = () => {
                   </div>
                   
                   <div className="md:pl-12">
-                    <h3 className="text-xl font-semibold mb-2">2010</h3>
+                    <h3 className="text-xl font-semibold mb-2">1995</h3>
                     <div className="card">
                       <h4 className="text-lg font-medium mb-2 text-accent-orange-500">Expansion</h4>
                       <p className="text-gray-600">
@@ -330,7 +332,7 @@ const About: React.FC = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="md:text-right md:pr-12">
-                    <h3 className="text-xl font-semibold mb-2">2015</h3>
+                    <h3 className="text-xl font-semibold mb-2">2002</h3>
                     <div className="card">
                       <h4 className="text-lg font-medium mb-2 text-accent-orange-500">Growth</h4>
                       <p className="text-gray-600">
